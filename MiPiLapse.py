@@ -75,7 +75,7 @@ fileSerial = 1
 while True:
     
     d = datetime.now()
-    if d.hour > 2:
+    if d.year > 2099:
         
         # Set FileSerialNumber to 000X using four digits
         fileSerialNumber = "%04d" % (fileSerial)
@@ -106,7 +106,7 @@ while True:
         fileSerial += 1
         
         # Wait 30 seconds (1 minute) before next capture
-        time.sleep(30)
+        time.sleep(20)
         
     else:
         
