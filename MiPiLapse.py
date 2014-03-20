@@ -93,7 +93,7 @@ while True:
         
         # Capture the image using raspistill. Set to capture with added sharpening, auto white balance and average metering mode
         # Change these settings where you see fit and to suit the conditions you are using the camera in
-        os.system("raspistill -w " + str(imgWidth) + " -h " + str(imgHeight) + " -o " + str(d.month) + "_" + str(d.day) + "_" + str(d.hour) + "_" str(d.minute) + "_" "number" + str(fileSerialNumber) + ".jpg  -sh 100 -awb auto -mm average -v -hf -vf")
+        os.system("raspistill -w " + str(imgWidth) + " -h " + str(imgHeight) + " -o " + str(d.year) + str(d.month) + str(d.day) + "number" + str(fileSerialNumber) + ".jpg -awb auto -mm average -v -hf -vf")
 
              
         # os.system("sudo ./dropbox_uploader.sh upload " + str(d.year) + str(d.month) + str(d.day) + "number" + str(fileSerialNumber) + ".jpg" + " /pictures/raspi")
@@ -106,7 +106,7 @@ while True:
         fileSerial += 1
         
         # Wait 30 seconds (1 minute) before next capture
-        time.sleep(5)
+        time.sleep(2)
         
     else:
         
