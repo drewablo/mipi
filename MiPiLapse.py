@@ -75,7 +75,7 @@ fileSerial = 1
 while True:
     
     d = datetime.now()
-    if d.year > 2099:
+    if d.year < 2099:
         
         # Set FileSerialNumber to 000X using four digits
         fileSerialNumber = "%04d" % (fileSerial)
